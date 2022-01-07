@@ -243,7 +243,7 @@ body {
 .pantalla_perdedores .content_frase .content_moto_perdedora {
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	flex-direction: column;
 	max-width: 150px;
 }
@@ -258,7 +258,7 @@ body {
 .pantalla_perdedores h6 {
 	margin-bottom: 0;
 	font-size: 0.75rem;
-	text-align: left;
+	font-weight: 700;
 }
 
 .pantalla_perdedores .moto_sonido {
