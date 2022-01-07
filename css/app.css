@@ -75,7 +75,7 @@ body {
 
 /* Pantalla Juego */
 .pantalla_juego {
-	/*display: none;*/
+	display: none;
 }
 
 .pantalla_juego .logo {
@@ -167,8 +167,54 @@ body {
 .modal-body p span {
 	font-weight: 700;
 }
-
 /* Modal end */
+
+/* Pantalla Ganadores */
+.pantalla_ganadores {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.pantalla_ganadores .logo {
+	margin-bottom: 40px;
+}
+
+.pantalla_ganadores .frase {
+	font-family: Soloist;
+	font-size: 2rem;
+	color: black;
+	margin-bottom: -20px;
+}
+
+.pantalla_ganadores .moto_ganadora {
+	border-radius: 10px;
+	border: solid 3px red;
+}
+
+.pantalla_ganadores h5 {
+	font-weight: 700;
+	font-size: 2rem;
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+.pantalla_ganadores p {
+	font-weight: 300;
+	font-size: 1.1rem;
+	margin: 0;
+}
+
+.pantalla_ganadores p span {
+	font-weight: 700;
+	text-align: left;
+}
+
+.pantalla_ganadores .elegir {
+	font-size: 1.5rem;
+	margin-bottom: 15px;
+}
+/* Pantalla Ganadores end */
 
 
 
