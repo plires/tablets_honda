@@ -174,6 +174,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
+	display: none;
 }
 
 .pantalla_ganadores .logo {
@@ -215,6 +216,83 @@ body {
 	margin-bottom: 15px;
 }
 /* Pantalla Ganadores end */
+
+/* Pantalla Perdedores */
+.pantalla_perdedores {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.pantalla_perdedores .content_frase {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: solid 1px black;
+	padding-bottom: 10px;
+}
+
+.pantalla_perdedores .frase {
+	font-family: Soloist;
+	font-size: 1.5rem;
+	color: black;
+	margin-bottom: 0;
+	margin-right: 20px;
+}
+
+.pantalla_perdedores .content_frase .content_moto_perdedora {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	max-width: 150px;
+}
+
+.pantalla_perdedores .content_frase .content_moto_perdedora img {
+	border-radius: 10px;
+	border: solid 3px black;
+	margin-bottom: 5px;
+	max-width: 150px;
+}
+
+.pantalla_perdedores h6 {
+	margin-bottom: 0;
+	font-size: 0.75rem;
+	text-align: left;
+}
+
+.pantalla_perdedores .moto_sonido {
+	border-radius: 10px;
+	border: solid 3px red;
+}
+
+.pantalla_perdedores h5 {
+	font-weight: 700;
+	font-size: 2rem;
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+.pantalla_perdedores h3 {
+	font-family: Soloist;
+	font-size: 1.5rem;
+	color: red;
+}
+
+.pantalla_perdedores p {
+	font-weight: 300;
+	font-size: 1rem;
+}
+
+.pantalla_perdedores p span {
+	font-weight: 700;
+}
+
+.pantalla_perdedores .elegir {
+	font-size: 1.5rem;
+	margin-bottom: 15px;
+}
+/* Pantalla Perdedores end */
 
 
 
