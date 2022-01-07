@@ -1,0 +1,56 @@
+/* Soloist - latin */
+@font-face {
+  font-family: 'Soloist';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/soloist1.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/soloist1.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/soloist1.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Soloist.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Soloist.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Soloist.svg#Soloist') format('svg'); /* Legacy iOS */
+}
+
+/* Roboto-light - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: lighter;
+  font-weight: 300;
+  src: url('../fonts/Roboto-Light.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Roboto-Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Roboto-Light.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Roboto-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Roboto-Light.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* Roboto-medium - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: medium;
+  font-weight: 500;
+  src: url('../fonts/Roboto-Medium.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Roboto-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Roboto-Medium.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Roboto-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Roboto-Medium.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* Roboto-bold - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: bolder;
+  font-weight: 700;
+  src: url('../fonts/Roboto-Bold.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Roboto-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Roboto-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Roboto-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Roboto-Bold.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
