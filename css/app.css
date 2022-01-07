@@ -1,6 +1,7 @@
 @import 'fonts.css';
 
 body {
+	font-family: Roboto;
 	background: #e0e0e0;
 }
 
@@ -9,17 +10,33 @@ body {
   transition: all ease-in-out .3s;
 }
 
+.btn-primary {
+	background: red!important;
+	border-color: red!important;
+}
+
+.btn-primary:hover {
+	background: black!important;
+	border-color: black!important;
+	color: white!important;
+}
+
 #app {
 	padding: 15px;
 	height: 100vh;
 	width: 100%;
 }
 
-#app .pantalla_inicial .col-md-12 {
+/* Pantalla Inicial */
+.pantalla_inicial .col-md-12 {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
+}
+
+.pantalla_inicial {
+	display: none;
 }
 
 .pantalla_inicial .logo {
@@ -52,6 +69,63 @@ body {
 .pantalla_inicial .boton_inicial:hover {
 	opacity: 0.6;
 }
+/* Pantalla Inicial end */
+
+/* Pantalla Juego */
+.pantalla_juego .logo {
+	margin-bottom: 20px;	
+}
+
+.pantalla_juego .frase {
+	font-family: Soloist;
+	font-size: 1.5rem;
+	color: black;
+	border-bottom: solid 1px black;
+}
+
+.pantalla_juego .motos img {
+	cursor: pointer;
+	border-radius: 10px;
+	border: solid 2px black;
+}
+
+.pantalla_juego .motos img:hover {
+	opacity: 0.7;
+	border: solid 2px red;
+}
+
+.pantalla_juego .motos .content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+.pantalla_juego .motos .content h3 {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.pantalla_juego .motos .content button {
+	font-size: 0.7rem;
+	font-weight: 300;
+	padding: 5px;
+}
+
+.pantalla_juego .elegir {
+	font-size: 1.25rem;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-weight: 300;
+}
+
+.pantalla_juego .reiniciar {
+	font-size: 0,85rem;
+	font-weight: 300;
+}
+/* Pantalla Juego end */
 
 
 
