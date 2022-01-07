@@ -66,20 +66,26 @@
 		<!-- Modal end -->
 		
 		<!-- Pantalla Inicial -->
-		<div class="container pantalla_inicial h-100">
+		<div v-if="pantallaInicio" class="container pantalla_inicial h-100">
 			<div class="row h-100">
 				<div class="col-md-12 text-center h-100">
 					<img class="img-fluid logo" src="./img/logo-onda.png" alt="logo honda">
 					<p class="honda_terapia">#HONDATERAPIA</p>
 					<p class="frase_inicial">Reproducí el sonido de una <span>moto Honda</span> <br>y demostrá cuánto sabes</p>
-					<img class="img-fluid boton_inicial transition" src="./img/boton.png" alt="inicio">
+					<img @click="goToPantallaJuego" class="img-fluid boton_inicial transition" src="./img/boton.png" alt="inicio">
 				</div>
 			</div>
 		</div>
 		<!-- Pantalla Inicial -->
 
 		<!-- Pantalla Juego -->
-		<div class="container pantalla_juego h-100">
+		<div v-if="pantallaJuego" class="container pantalla_juego h-100">
+
+			<audio id="player"  loop autoplay>
+  			<source id="mp3_src" src="#" type="audio/mpeg">
+  			Your browser does not support the audio element.
+			</audio>
+
 			<div class="row">
 				<div class="col-md-10 offset-md-1 text-center h-100">
 					<img class="img-fluid logo" src="./img/logo-onda.png" alt="logo honda">
@@ -186,7 +192,7 @@
 		<!-- Pantalla Juego -->
 
 		<!-- Pantalla Ganadores -->
-		<div class="container pantalla_ganadores h-100">
+		<div v-if="pantallaGanadores" class="container pantalla_ganadores h-100">
 
 			<div class="row">
 				<div class="col-md-12 text-center">
@@ -218,7 +224,7 @@
 		<!-- Pantalla Ganadores -->
 
 		<!-- Pantalla Perdedores -->
-		<div class="container pantalla_perdedores h-100">
+		<div v-if="pantallaPerdedores" class="container pantalla_perdedores h-100">
 
 			<div class="row">
 				<div class="col-md-12 text-center">
