@@ -5,6 +5,7 @@ body {
 	background: #e0e0e0;
 }
 
+/* Comunes */
 .transition{
   -webkit-transition: all ease-in-out .3s; /* Safari */
   transition: all ease-in-out .3s;
@@ -14,6 +15,7 @@ body {
 	background: red!important;
 	border-color: red!important;
 }
+/* Comunes end */
 
 .btn-primary:hover {
 	background: black!important;
@@ -72,6 +74,10 @@ body {
 /* Pantalla Inicial end */
 
 /* Pantalla Juego */
+.pantalla_juego {
+	/*display: none;*/
+}
+
 .pantalla_juego .logo {
 	margin-bottom: 20px;	
 }
@@ -118,7 +124,7 @@ body {
 	font-size: 1.25rem;
 	margin-top: 15px;
 	margin-bottom: 10px;
-	font-weight: 300;
+	font-weight: 700;
 }
 
 .pantalla_juego .reiniciar {
@@ -126,6 +132,43 @@ body {
 	font-weight: 300;
 }
 /* Pantalla Juego end */
+
+/* Modal */
+.modal-lg, .modal-xl {
+	max-width: 900px;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+	background: #e8e8e8;
+}
+
+.modal-header {
+	align-items: flex-start;
+	border-bottom: none;
+}
+
+.modal-header h5 {
+	font-family: Soloist;
+	font-size: 3.5rem;
+}
+
+.modal-body img {
+	border-radius: 10px;
+	border: solid 3px red;
+}
+
+.modal-body p {
+	font-weight: 300;
+	margin: 0;
+}
+
+.modal-body p span {
+	font-weight: 700;
+}
+
+/* Modal end */
 
 
 
