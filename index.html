@@ -99,81 +99,30 @@
 
 					<div class="row">
 
-						<!-- CRF450R -->
-						<div class="col-md-4">
+						<!-- Grilla Motos -->
+						<div 
+							v-for="moto in motos" 
+							key="moto.id" 
+							:class="[ moto.id % 2 == 0 ? 'col-md-5' : 'col-md-5 offset-md-1']"
+							>
 							<div class="motos">
-								<img @click="motoSeleccionadaPorUsuario(1)" class="img-fluid transition images_motos" src="./img/crf450r.jpg" alt="moto honda crf450r">
+								<img 
+									@click="motoSeleccionadaPorUsuario(moto.id)" 
+									class="img-fluid transition images_motos" 
+									:src="'./img/' + moto.image_sm" 
+									:alt="'moto listado honda ' + moto.name">
 								<div class="content">
-									<h3>CRF450R</h3>
-									<button @click="showMoto(1)" class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
+									<h3>{{ moto.name }}</h3>
+									<button 
+										@click="showMoto(moto.id)" 
+										class="transition btn btn-primary" 
+										data-bs-toggle="modal" 
+										data-bs-target="#motoModal">VER MÁS
+									</button>
 								</div>
 							</div>
 						</div>
-						<!-- CRF450R end -->
-
-						<!-- AFRICA TWIN -->
-						<div class="col-md-4">
-							<div class="motos">
-								<img @click="motoSeleccionadaPorUsuario(2)" class="img-fluid transition images_motos" src="./img/africa.jpg" alt="moto honda africa">
-								<div class="content">
-									<h3>AFRICA TWIN</h3>
-									<button @click="showMoto(2)" class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
-								</div>
-							</div>
-						</div>
-						<!-- AFRICA TWIN end -->
-
-						<!-- CBR 1000RR -->
-						<div class="col-md-4">
-							<div class="motos">
-								<img @click="motoSeleccionadaPorUsuario(3)" class="img-fluid transition images_motos" src="./img/cbr1000rr.jpg" alt="moto honda cbr1000rr">
-								<div class="content">
-									<h3>CBR 1000RR</h3>
-									<button @click="showMoto(3)" class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
-								</div>
-							</div>
-						</div>
-						<!-- CBR 1000RR end -->
-
-					</div>
-
-					<div class="row">
-
-						<!-- CB1000R -->
-						<div class="col-md-4">
-							<div class="motos">
-								<img @click="motoSeleccionadaPorUsuario(4)" class="img-fluid transition images_motos" src="./img/cbr1000r.jpg" alt="moto honda cbr1000r">
-								<div class="content">
-									<h3>CB1000R</h3>
-									<button @click="showMoto(4)" class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
-								</div>
-							</div>
-						</div>
-						<!-- CB1000R end -->
-
-						<!-- CRF450R -->
-						<div class="col-md-4">
-							<div class="motos">
-								<img @click="motoSeleccionadaPorUsuario(5)" class="img-fluid transition images_motos" src="./img/crf450r.jpg" alt="moto honda crf450r">
-								<div class="content">
-									<h3>CRF450R</h3>
-									<button @click="showMoto(5)" class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
-								</div>
-							</div>
-						</div>
-						<!-- CRF450R end -->
-
-						<!-- CRF450R -->
-						<div class="col-md-4">
-							<div class="motos">
-								<img @click="motoSeleccionadaPorUsuario(6)" class="img-fluid transition images_motos" src="./img/crf450r.jpg" alt="moto honda crf450r">
-								<div class="content">
-									<h3>CRF450R</h3>
-									<button @click="showMoto(6)" class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
-								</div>
-							</div>
-						</div>
-						<!-- CRF450R end -->
+						<!-- Grilla Motos end -->
 
 					</div>
 
@@ -197,10 +146,7 @@
 
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<img 
-						class="img-fluid logo" 
-						:src="'./img/' + motoCorrecta.image_sm" 
-						:alt="'moto honda' + motoCorrecta.name + ' chica'">
+					<img class="img-fluid logo" src="./img/logo-onda.png" alt="logo honda ganadores">
 					<p class="frase">¡CORRECTO! Sos todo un experto en motos</p>
 				</div>
 			</div>

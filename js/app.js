@@ -30,7 +30,7 @@ let app = new Vue({
       {
         id: 2,
         name: 'AFRICA TWIN',
-        description: 'Más liviana, más poderosa, más control. <span>La nueva CBR1000RR</span> SP1 tiene un motor de 16 válvulas DOHC con 10 caballos de fuerza más y contribuyendo una disminución en su peso total. Tiene una mejora de 14% en potencia sobre peso. La nueva SP mantiene al usuario amigable, dado a su gran paquete electrónico que es lo principal de su concepto de control total.',
+        description: 'Cuanto mayor sea el reto, mayor será la recompensa. Te animamos a que te atrevas. Inspirada en la leyenda de Dakar, con un rendimiento contundente, detalles en negro y nuevos colores tomados directamente de la competición de rallys, <span>la CRF1100L Africa Twin</span> nace para rendir cuando las cosas se ponen difíciles.',
         image_sm: 'africa.jpg',
         image_lg: 'africa-gr.jpg'
       },
@@ -47,20 +47,6 @@ let app = new Vue({
         description: 'Una naked deportiva que marca la diferencia. Compacta y robusta, es el foco de atención de todas las miradas con sus acabados metálicos pulidos que son el reflejo de la tradicional Café Racer potente y con carácter. Es una bestia poderosa que se maneja y responde perfectamente. Animate a conocer <span>la nueva Honda CB1000R.</span>',
         image_sm: 'cbr1000r.jpg',
         image_lg: 'cbr1000r-gr.jpg'
-      },
-      {
-        id: 5,
-        name: 'MOTO_5',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        image_sm: 'moto_5.jpg',
-        image_lg: 'moto_5-gr.jpg'
-      },
-      {
-        id: 6,
-        name: 'MOTO_6',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        image_sm: 'moto_6.jpg',
-        image_lg: 'moto_6-gr.jpg'
       }
     ]
 
@@ -82,8 +68,6 @@ let app = new Vue({
         2: '2.mp3', 
         3: '3.mp3', 
         4: '4.mp3', 
-        5: '5.mp3', 
-        6: '6.mp3'
       };
 
       localStorage.setItem("sounds", JSON.stringify(mysounds));
