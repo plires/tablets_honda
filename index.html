@@ -47,7 +47,10 @@
 		        <div class="container-fluid">
 					    <div class="row">
 					      <div class="col-md-7">
-					      	<img class="img-fluid" src="./img/crf450r-gr.jpg" alt="crf450r grande">
+					      	<img 
+					      		class="img-fluid" 
+					      		:src="'./img/' + motoToShowInModal.image_lg" 
+					      		:alt="'moto honda ' + motoToShowInModal.name + 'modal grande'">
 					      </div>
 					      <div class="col-md-5">
 					      	<p v-html="motoToShowInModal.description"></p>
@@ -194,14 +197,20 @@
 
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<img class="img-fluid logo" src="./img/logo-onda.png" alt="logo honda">
+					<img 
+						class="img-fluid logo" 
+						:src="'./img/' + motoCorrecta.image_sm" 
+						:alt="'moto honda' + motoCorrecta.name + ' chica'">
 					<p class="frase">¡CORRECTO! Sos todo un experto en motos</p>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-7">
-					<img class="img-fluid moto_ganadora" src="./img/crf450r-gr.jpg" alt="moto crf450r ganador">
+					<img 
+						class="img-fluid moto_ganadora" 
+						:src="'./img/' + motoCorrecta.image_lg" 
+						:alt="'moto honda' + motoCorrecta.name + ' grande'">
 					<h5>{{ motoCorrecta.name }}</h5>
 				</div>
 
@@ -232,7 +241,10 @@
 				<div class="col-md-12 text-center content_frase">
 					<p class="frase">TU ELECCIÓN ES INCORRECTA!</p>
 					<div class="content_moto_perdedora">
-						<img class="img-fluid" src="./img/africa.jpg" alt="moto africa perdedor">
+						<img 
+							class="img-fluid" 
+							:src="'./img/' + motoSeleccionada.image_sm" 
+							:alt="'moto seleccionada honda' + motoSeleccionada.name">
 						<h6>{{ motoSeleccionada.name }}</h6>
 					</div>
 				</div>
@@ -240,7 +252,10 @@
 
 			<div class="row">
 				<div class="col-md-6">
-					<img class="img-fluid moto_sonido" src="./img/crf450r-gr.jpg" alt="moto crf450r ganador">
+					<img 
+						class="img-fluid moto_sonido" 
+						:src="'./img/' + motoCorrecta.image_lg" 
+						:alt="'moto correcta honda' + motoCorrecta.name + ' grande'">
 					<h5>{{ motoCorrecta.name }}</h5>
 				</div>
 
