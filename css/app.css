@@ -15,6 +15,10 @@ body {
 	background: red!important;
 	border-color: red!important;
 }
+
+.image_featured {
+	border: solid 2px red!important;
+}
 /* Comunes end */
 
 .btn-primary:hover {

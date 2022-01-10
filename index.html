@@ -101,7 +101,7 @@
 						<!-- CRF450R -->
 						<div class="col-md-4">
 							<div class="motos">
-								<img class="img-fluid transition" src="./img/crf450r.jpg" alt="moto honda crf450r">
+								<img @click="motoSeleccionadaPorUsuario(1)" class="img-fluid transition images_motos" src="./img/crf450r.jpg" alt="moto honda crf450r">
 								<div class="content">
 									<h3>CRF450R</h3>
 									<button class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
@@ -113,7 +113,7 @@
 						<!-- AFRICA TWIN -->
 						<div class="col-md-4">
 							<div class="motos">
-								<img class="img-fluid transition" src="./img/africa.jpg" alt="moto honda africa">
+								<img @click="motoSeleccionadaPorUsuario(2)" class="img-fluid transition images_motos" src="./img/africa.jpg" alt="moto honda africa">
 								<div class="content">
 									<h3>AFRICA TWIN</h3>
 									<button class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
@@ -125,7 +125,7 @@
 						<!-- CBR 1000RR -->
 						<div class="col-md-4">
 							<div class="motos">
-								<img class="img-fluid transition" src="./img/cbr1000rr.jpg" alt="moto honda cbr1000rr">
+								<img @click="motoSeleccionadaPorUsuario(3)" class="img-fluid transition images_motos" src="./img/cbr1000rr.jpg" alt="moto honda cbr1000rr">
 								<div class="content">
 									<h3>CBR 1000RR</h3>
 									<button class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
@@ -141,7 +141,7 @@
 						<!-- CB1000R -->
 						<div class="col-md-4">
 							<div class="motos">
-								<img class="img-fluid transition" src="./img/cbr1000r.jpg" alt="moto honda cbr1000r">
+								<img @click="motoSeleccionadaPorUsuario(4)" class="img-fluid transition images_motos" src="./img/cbr1000r.jpg" alt="moto honda cbr1000r">
 								<div class="content">
 									<h3>CB1000R</h3>
 									<button class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
@@ -153,7 +153,7 @@
 						<!-- CRF450R -->
 						<div class="col-md-4">
 							<div class="motos">
-								<img class="img-fluid transition" src="./img/crf450r.jpg" alt="moto honda crf450r">
+								<img @click="motoSeleccionadaPorUsuario(5)" class="img-fluid transition images_motos" src="./img/crf450r.jpg" alt="moto honda crf450r">
 								<div class="content">
 									<h3>CRF450R</h3>
 									<button class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
@@ -165,7 +165,7 @@
 						<!-- CRF450R -->
 						<div class="col-md-4">
 							<div class="motos">
-								<img class="img-fluid transition" src="./img/crf450r.jpg" alt="moto honda crf450r">
+								<img @click="motoSeleccionadaPorUsuario(6)" class="img-fluid transition images_motos" src="./img/crf450r.jpg" alt="moto honda crf450r">
 								<div class="content">
 									<h3>CRF450R</h3>
 									<button class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
@@ -181,10 +181,10 @@
 
 			<div class="row">
 				<div class="col-md-10 offset-md-1">
-					<button class="transition btn btn-primary elegir w-100">ELEGIR</button>
+					<button @click="jugar" :disabled="verifyMotoSelected" class="transition btn btn-primary elegir w-100">ELEGIR</button>
 				</div>
 				<div class="col-md-2 offset-md-5">
-					<button class="transition btn btn-primary reiniciar w-100">REINICIAR</button>
+					<button @click="goToPantallaInicio" class="transition btn btn-primary reiniciar w-100">REINICIAR</button>
 				</div>
 			</div>
 
