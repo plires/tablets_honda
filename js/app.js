@@ -6,6 +6,7 @@ let app = new Vue({
     return {
       motoSeleccionada: {},
       motoCorrecta: {},
+      motoToShowInModal: {},
       motos: [],
       currentSound: '',
       playButtonEnabled: false,
@@ -138,6 +139,13 @@ let app = new Vue({
         this.goToPantallaPerdedores()
 
       }
+
+    },
+
+    showMoto: function(moto_id) {
+
+      let motoToShowInModal = this.motos.filter((moto) => moto.id == moto_id)
+      this.motoToShowInModal = motoToShowInModal[0]
 
     },
 

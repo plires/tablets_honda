@@ -39,7 +39,7 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		      	<div class="text-center w-100">
-		        	<h5 class="modal-title" id="motoModalLabel">CRF450R</h5>
+		        	<h5 class="modal-title" id="motoModalLabel">{{ motoToShowInModal.name }}</h5>
 		      	</div>
 		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		      </div>
@@ -50,9 +50,7 @@
 					      	<img class="img-fluid" src="./img/crf450r-gr.jpg" alt="crf450r grande">
 					      </div>
 					      <div class="col-md-5">
-					      	<p>
-					      		En el motocross actual, el Holeshot es una obsesión para cualquier corredor. <span>La Honda CRF450R</span> es una máquina diseñada para estar siempre adelante en la primera curva, sin resignar ese liderazgo hasta la bandera a cuadros. Sus características, detalles tecnológicos y diseño están optimizados para el exigente circuito de MX mundial, donde una fracción de segundo es la ventaja que te permitirá marcar la diferencia a tu favor.
-					      	</p>
+					      	<p v-html="motoToShowInModal.description"></p>
 					      </div>
 					    </div>
 					  </div>
@@ -104,7 +102,7 @@
 								<img @click="motoSeleccionadaPorUsuario(1)" class="img-fluid transition images_motos" src="./img/crf450r.jpg" alt="moto honda crf450r">
 								<div class="content">
 									<h3>CRF450R</h3>
-									<button class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
+									<button @click="showMoto(1)" class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
 								</div>
 							</div>
 						</div>
@@ -116,7 +114,7 @@
 								<img @click="motoSeleccionadaPorUsuario(2)" class="img-fluid transition images_motos" src="./img/africa.jpg" alt="moto honda africa">
 								<div class="content">
 									<h3>AFRICA TWIN</h3>
-									<button class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
+									<button @click="showMoto(2)" class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
 								</div>
 							</div>
 						</div>
@@ -128,7 +126,7 @@
 								<img @click="motoSeleccionadaPorUsuario(3)" class="img-fluid transition images_motos" src="./img/cbr1000rr.jpg" alt="moto honda cbr1000rr">
 								<div class="content">
 									<h3>CBR 1000RR</h3>
-									<button class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
+									<button @click="showMoto(3)" class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
 								</div>
 							</div>
 						</div>
@@ -144,7 +142,7 @@
 								<img @click="motoSeleccionadaPorUsuario(4)" class="img-fluid transition images_motos" src="./img/cbr1000r.jpg" alt="moto honda cbr1000r">
 								<div class="content">
 									<h3>CB1000R</h3>
-									<button class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
+									<button @click="showMoto(4)" class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
 								</div>
 							</div>
 						</div>
@@ -156,7 +154,7 @@
 								<img @click="motoSeleccionadaPorUsuario(5)" class="img-fluid transition images_motos" src="./img/crf450r.jpg" alt="moto honda crf450r">
 								<div class="content">
 									<h3>CRF450R</h3>
-									<button class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
+									<button @click="showMoto(5)" class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
 								</div>
 							</div>
 						</div>
@@ -168,7 +166,7 @@
 								<img @click="motoSeleccionadaPorUsuario(6)" class="img-fluid transition images_motos" src="./img/crf450r.jpg" alt="moto honda crf450r">
 								<div class="content">
 									<h3>CRF450R</h3>
-									<button class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
+									<button @click="showMoto(6)" class="transition btn btn-primary" data-bs-toggle="modal" data-bs-target="#motoModal">VER MÁS</button>
 								</div>
 							</div>
 						</div>
@@ -204,19 +202,17 @@
 			<div class="row">
 				<div class="col-md-7">
 					<img class="img-fluid moto_ganadora" src="./img/crf450r-gr.jpg" alt="moto crf450r ganador">
-					<h5>CRF450R</h5>
+					<h5>{{ motoCorrecta.name }}</h5>
 				</div>
 
 				<div class="col-md-5">
-					<p>
-	      		En el motocross actual, el Holeshot es una obsesión para cualquier corredor. <span>La Honda CRF450R</span> es una máquina diseñada para estar siempre adelante en la primera curva, sin resignar ese liderazgo hasta la bandera a cuadros. Sus características, detalles tecnológicos y diseño están optimizados para el exigente circuito de MX mundial, donde una fracción de segundo es la ventaja que te permitirá marcar la diferencia a tu favor.
-	      	</p>
+					<p v-html="motoCorrecta.description"></p>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-12">
-					<button class="transition btn btn-primary elegir w-100">JUGAR DE NUEVO</button>
+					<button @click="goToPantallaJuego" class="transition btn btn-primary elegir w-100">JUGAR DE NUEVO</button>
 				</div>
 			</div>
 
@@ -237,7 +233,7 @@
 					<p class="frase">TU ELECCIÓN ES INCORRECTA!</p>
 					<div class="content_moto_perdedora">
 						<img class="img-fluid" src="./img/africa.jpg" alt="moto africa perdedor">
-						<h6>AFRICA TWIN</h6>
+						<h6>{{ motoSeleccionada.name }}</h6>
 					</div>
 				</div>
 			</div>
@@ -245,20 +241,18 @@
 			<div class="row">
 				<div class="col-md-6">
 					<img class="img-fluid moto_sonido" src="./img/crf450r-gr.jpg" alt="moto crf450r ganador">
-					<h5>CRF450R</h5>
+					<h5>{{ motoCorrecta.name }}</h5>
 				</div>
 
 				<div class="col-md-6">
-					<h3>El sonido corresponde A la moto CRF450</h3>
-					<p>
-	      		En el motocross actual, el Holeshot es una obsesión para cualquier corredor. <span>La Honda CRF450R</span> es una máquina diseñada para estar siempre adelante en la primera curva, sin resignar ese liderazgo hasta la bandera a cuadros. Sus características, detalles tecnológicos y diseño están optimizados para el exigente circuito de MX mundial, donde una fracción de segundo es la ventaja que te permitirá marcar la diferencia a tu favor.
-	      	</p>
+					<h3>El sonido corresponde A la moto {{ motoCorrecta.name }}</h3>
+					<p v-html="motoCorrecta.description"></p>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-12">
-					<button class="transition btn btn-primary elegir w-100">JUGAR DE NUEVO</button>
+					<button @click="goToPantallaJuego" class="transition btn btn-primary elegir w-100">JUGAR DE NUEVO</button>
 				</div>
 			</div>
 
