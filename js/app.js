@@ -16,7 +16,7 @@ let app = new Vue({
       pantallaPerdedores: false,
     }
   },
-  mounted() {
+  created() {
     this.veryfyLocalStorage()
 
     this.motos = [
