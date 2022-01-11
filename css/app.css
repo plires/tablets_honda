@@ -24,10 +24,6 @@ body {
 .btn-check:focus + .btn, .btn:focus {
 	box-shadow: none;
 }
-
-.image_featured {
-	border: solid 2px red!important;
-}
 /* Comunes end */
 
 .btn-primary:hover {
@@ -100,6 +96,29 @@ body {
 	font-size: 1.5rem;
 	color: black;
 	border-bottom: solid 1px black;
+}
+
+.motos_featured {
+	position: relative;
+}
+
+.motos_featured:before {
+	content: url('../img/tilde_selected.png');
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: green;
+	position: absolute;
+	right: 3%;
+	top: 3%;
+	z-index: 999;
+}
+
+.image_featured {
+	border: solid 2px green!important;
 }
 
 .pantalla_juego .motos img {

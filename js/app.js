@@ -193,8 +193,17 @@ let app = new Vue({
         imagesMotos[i].classList.remove('image_featured');
       }
 
-      // Agregar la clase "image_featured" a la imagen a la cual se hizo click
+      // Remover todas las clases "motos_featured" de los contenedores de imagenes
+      let contentImagesMotos = document.getElementsByClassName('motos_featured')
+
+      for(var i = 0; i < contentImagesMotos.length ; i++)
+      {
+        contentImagesMotos[i].classList.remove('motos_featured');
+      }
+
+      // Agregar la clases destacadas a la imagen y div contenedor a la cual se hizo click
       event.target.classList.add('image_featured')
+      event.target.parentElement.classList.add('motos_featured')
 
       let motoFound = this.motos.filter((moto) => moto.id == id)
 
