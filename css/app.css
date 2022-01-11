@@ -20,6 +20,11 @@ body {
 	opacity: 0.35;
 }
 
+.btn-check:focus + .btn-primary, .btn-primary:focus,
+.btn-check:focus + .btn, .btn:focus {
+	box-shadow: none;
+}
+
 .image_featured {
 	border: solid 2px red!important;
 }
