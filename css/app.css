@@ -16,6 +16,10 @@ body {
 	border-color: red!important;
 }
 
+.btn.disabled, .btn:disabled, fieldset:disabled .btn {
+	opacity: 0.35;
+}
+
 .image_featured {
 	border: solid 2px red!important;
 }
