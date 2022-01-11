@@ -93,6 +93,7 @@ let app = new Vue({
     goToPantallaJuego: function() {
       this.hiddenAllScreen()
       this.pantallaJuego = true
+      this.motoSeleccionada = {}
 
       let obj = JSON.parse(localStorage.getItem("sounds")) // Guardo en un objeto el item "sounds" del localstorage
       var keys = Object.keys(obj) // Obtengo las key del objeto
@@ -181,7 +182,6 @@ let app = new Vue({
       this.motoCorrecta = motoCorrecta[0]
 
     },
-
 
     motoSeleccionadaPorUsuario: function(id) {
 
