@@ -8,6 +8,7 @@ let app = new Vue({
       motoCorrecta: {},
       motoToShowInModal: {},
       motos: [],
+      counter: '',
       currentSound: '',
       playButtonEnabled: false,
       pantallaInicio: true,
@@ -17,7 +18,8 @@ let app = new Vue({
     }
   },
   created() {
-    this.veryfyLocalStorage()
+    this.veryfyLocalStorageSounds()
+    this.veryfyLocalStorageCounter()
 
     this.motos = [
       {
@@ -56,10 +58,18 @@ let app = new Vue({
 
   methods: {
 
-    veryfyLocalStorage: function() {
+    veryfyLocalStorageSounds: function() {
 
       if (!localStorage.sounds) {
         this.regenerateSounds()
+      }
+
+    },
+
+    veryfyLocalStorageCounter: function() {
+
+      if (!localStorage.counter) {
+        this.generateCounter()
       }
 
     },
@@ -73,6 +83,12 @@ let app = new Vue({
       };
 
       localStorage.setItem("sounds", JSON.stringify(mysounds));
+    },
+
+    generateCounter: function() {
+      let myCounter = 100;
+
+      localStorage.setItem("counter", JSON.stringify(myCounter));
     },
 
     hiddenAllScreen: function() {
@@ -90,10 +106,20 @@ let app = new Vue({
       this.pantallaInicio = true
     },
 
+    setCounter: function() {
+      // Guardamos y actualizamos el contador
+      let counterStorage = JSON.parse(localStorage.getItem("counter"))
+      counterStorage = counterStorage + 1
+      localStorage.setItem("counter", JSON.stringify(counterStorage));
+      this.counter = counterStorage
+    },
+
     goToPantallaJuego: function() {
       this.hiddenAllScreen()
       this.pantallaJuego = true
       this.motoSeleccionada = {}
+
+      this.setCounter()
 
       let obj = JSON.parse(localStorage.getItem("sounds")) // Guardo en un objeto el item "sounds" del localstorage
       var keys = Object.keys(obj) // Obtengo las key del objeto
@@ -102,7 +128,7 @@ let app = new Vue({
       let sound = obj[key] // Selecciono el sonido de esa posicion
       
       delete obj[key]; // borro del objeto esa posicion
-      localStorage.clear(); // borrar el localstorage
+      // localStorage.clear("sounds"); // borrar el localstorage
       localStorage.setItem("sounds", JSON.stringify(obj)); // generar el nuevo local storage con el nuevo objeto
 
       if (Object.keys(obj).length === 0) {
