@@ -198,23 +198,25 @@
 		<div v-if="pantallaGanadores" class="container pantalla_ganadores h-100">
 
 			<div class="row">
-				<div class="col-md-12 text-center">
+				<div data-aos="fade-up" data-aos-delay="100" class="col-md-12 text-center">
 					<img 
 						data-aos="fade-up" 
 						data-aos-delay="50" 
 						class="img-fluid logo" 
 						src="./img/logo-onda.png" 
 						alt="logo honda ganadores">
-					<p 
-						data-aos="fade-up" 
-						data-aos-delay="100" 
-						class="frase">¡CORRECTO! Sos todo un experto en motos
-					</p>
+					<div class="content_frase_ganadora">
+						<p class="frase">¡CORRECTO! Sos todo un experto en motos</p>
+						<img 
+							class="img-fluid icono_ok" 
+							src="./img/icono-ok.png" 
+							alt="icono ganadores">
+					</div>
 				</div>
 			</div>
 
 			<div class="row">
-				<div class="col-md-7 text-center">
+				<div class="col-lg-7 text-center">
 					<img 
 						data-aos="fade-up" 
 						data-aos-delay="150" 
@@ -227,7 +229,7 @@
 					</h5>
 				</div>
 
-				<div class="col-md-5">
+				<div class="col-lg-5">
 					<p data-aos="fade-up" data-aos-delay="250" v-html="motoCorrecta.description"></p>
 				</div>
 			</div>
@@ -265,17 +267,23 @@
 					class="col-md-12 text-center content_frase">
 					<p class="frase">TU ELECCIÓN ES INCORRECTA!</p>
 					<div class="content_moto_perdedora">
+						<div>
+							<img 
+								class="img-fluid" 
+								:src="'./img/' + motoSeleccionada.image_sm" 
+								:alt="'moto seleccionada honda' + motoSeleccionada.name">
+							<h6>{{ motoSeleccionada.name }}</h6>
+						</div>
 						<img 
-							class="img-fluid" 
-							:src="'./img/' + motoSeleccionada.image_sm" 
-							:alt="'moto seleccionada honda' + motoSeleccionada.name">
-						<h6>{{ motoSeleccionada.name }}</h6>
+							class="img-fluid icono_error" 
+							src="./img/icono-error.png" 
+							alt="icono error">
 					</div>
 				</div>
 			</div>
 
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-12 col-lg-6 text-center">
 					<img
 						data-aos="fade-up" 
 						data-aos-delay="150"  
@@ -288,7 +296,7 @@
 					</h5>
 				</div>
 
-				<div class="col-md-6">
+				<div class="col-md-12 col-lg-6">
 					<h3
 						data-aos="fade-up" 
 						data-aos-delay="250">El sonido corresponde A la moto {{ motoCorrecta.name }}

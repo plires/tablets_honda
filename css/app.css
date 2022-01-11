@@ -253,6 +253,27 @@ body {
 	margin-bottom: -20px;
 }
 
+.pantalla_ganadores .content_frase_ganadora {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pantalla_ganadores .content_frase_ganadora p {
+	margin: 0;
+	margin-right: 10px;
+}
+
+.pantalla_ganadores .icono_ok {
+	animation: ganador 1s infinite;
+}
+
+@keyframes ganador {
+  0%   { transform: translateY(-10px); }
+  50%  { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
 .pantalla_ganadores .moto_ganadora {
 	border-radius: 10px;
 	border: solid 3px red;
@@ -309,8 +330,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	max-width: 150px;
 }
 
 .pantalla_perdedores .content_frase .content_moto_perdedora img {
@@ -319,6 +338,19 @@ body {
 	margin-bottom: 5px;
 	max-width: 150px;
 }
+
+.pantalla_perdedores .icono_error {
+	border: none!important;
+	margin-left: 20px;
+	animation: error 1s infinite;
+}
+
+@keyframes error {
+  0%   { transform: translateX(-10px); }
+  50%  { transform: translateX(0); }
+  100% { transform: translateX(-10px); }
+}
+
 
 .pantalla_perdedores h6 {
 	margin-bottom: 0;
