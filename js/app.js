@@ -218,3 +218,5 @@ let app = new Vue({
 
 });
 
+AOS.init();
+

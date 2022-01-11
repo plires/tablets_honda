@@ -70,10 +70,30 @@
 		<div v-if="pantallaInicio" class="container pantalla_inicial h-100">
 			<div class="row h-100">
 				<div class="col-md-12 text-center h-100">
-					<img class="img-fluid logo" src="./img/logo-onda.png" alt="logo honda">
-					<p class="honda_terapia">#HONDATERAPIA</p>
-					<p class="frase_inicial">Reproducí el sonido de una <span>moto Honda</span> <br>y demostrá cuánto sabes</p>
-					<img @click="goToPantallaJuego" class="img-fluid boton_inicial transition" src="./img/boton.png" alt="inicio">
+					<img 
+						data-aos="fade-up" 
+						data-aos-delay="50" 
+						class="img-fluid logo" 
+						src="./img/logo-onda.png" 
+						alt="logo honda">
+					<p 
+						data-aos="fade-up" 
+						data-aos-delay="100" 
+						class="honda_terapia">
+							#HONDATERAPIA
+					</p>
+					<p 
+						data-aos="fade-up" 
+						data-aos-delay="150" 
+						class="frase_inicial">Reproducí el sonido de una <span>moto Honda</span> <br>y demostrá cuánto sabes
+					</p>
+					<img 
+						data-aos="fade-up" 
+						data-aos-delay="200" 
+						@click="goToPantallaJuego" 
+						class="img-fluid boton_inicial transition" 
+						src="./img/boton.png" 
+						alt="inicio">
 				</div>
 			</div>
 		</div>
