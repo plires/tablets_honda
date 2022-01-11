@@ -109,8 +109,17 @@
 
 			<div class="row">
 				<div class="col-md-10 offset-md-1 text-center h-100">
-					<img class="img-fluid logo" src="./img/logo-onda.png" alt="logo honda">
-					<p class="frase">Seleccioná la moto a la que pertenece el sonido</p>
+					<img 
+						data-aos="fade-up" 
+						data-aos-delay="50" 
+						class="img-fluid logo" 
+						src="./img/logo-onda.png" 
+						alt="logo honda">
+					<p 
+						data-aos="fade-up" 
+						data-aos-delay="100"
+						class="frase">Seleccioná la moto a la que pertenece el sonido
+					</p>
 				</div>
 			</div>
 
@@ -124,9 +133,11 @@
 							v-for="(moto, index) in motos"
 							:key="index" 
 							:class="[ moto.id % 2 == 0 ? 'col-md-5' : 'col-md-5 offset-md-1']"
+							data-aos="fade-up" 
+							data-aos-delay="150"
 							>
 							<div class="motos">
-								<img 
+								<img
 									@click="motoSeleccionadaPorUsuario(moto.id)" 
 									class="img-fluid transition images_motos" 
 									:src="'./img/' + moto.image_sm" 
@@ -150,11 +161,20 @@
 			</div>
 
 			<div class="row">
-				<div class="col-md-10 offset-md-1">
-					<button @click="jugar" :disabled="verifyMotoSelected" class="transition btn btn-primary elegir w-100">ELEGIR</button>
+				<div data-aos="fade-up" data-aos-delay="200" class="col-md-10 offset-md-1">
+					<button 
+						@click="jugar" 
+						:disabled="verifyMotoSelected" 
+						class="transition btn btn-primary elegir w-100">ELEGIR
+					</button>
 				</div>
 				<div class="col-md-2 offset-md-5">
-					<button @click="goToPantallaInicio" class="transition btn btn-primary reiniciar w-100">REINICIAR</button>
+					<button 
+						data-aos="fade-up" 
+						data-aos-delay="250"
+						@click="goToPantallaInicio" 
+						class="transition btn btn-primary reiniciar w-100">REINICIAR
+					</button>
 				</div>
 			</div>
 
