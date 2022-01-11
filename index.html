@@ -33,6 +33,17 @@
 
 	<div id="app">
 
+		<!-- Counter -->
+		<section 
+			data-aos="fade-up" 
+			data-aos-delay="250" 
+			v-if="pantallaJuego" 
+			class="counter">
+				<p><span>{{ counter }}</span></p>
+				<p>Jugados</p>
+		</section>
+		<!-- Counter end -->
+
 		<!-- Modal -->
 		<div class="modal fade" id="motoModal" tabindex="-1" aria-labelledby="motoModalLabel" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered modal-xl">

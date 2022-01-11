@@ -36,7 +36,38 @@ body {
 	padding: 15px;
 	height: 100vh;
 	width: 100%;
+	position: relative;
 }
+
+/* Counter */
+.counter {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 100px;
+	height: 50px;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: red;
+	color: white;
+	flex-direction: column;
+	padding: 5px;
+	box-shadow: 0 0 5px grey;
+}
+
+.counter p {
+	margin: 0;
+	font-size: 0.85rem;
+	font-weight: 300;
+}
+
+.counter p span {
+	font-size: 1rem;
+	font-weight: 700;
+}
+/* Counter end */
 
 /* Pantalla Inicial */
 .pantalla_inicial .col-md-12 {
