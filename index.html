@@ -184,28 +184,45 @@
 
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<img class="img-fluid logo" src="./img/logo-onda.png" alt="logo honda ganadores">
-					<p class="frase">¡CORRECTO! Sos todo un experto en motos</p>
+					<img 
+						data-aos="fade-up" 
+						data-aos-delay="50" 
+						class="img-fluid logo" 
+						src="./img/logo-onda.png" 
+						alt="logo honda ganadores">
+					<p 
+						data-aos="fade-up" 
+						data-aos-delay="100" 
+						class="frase">¡CORRECTO! Sos todo un experto en motos
+					</p>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-7">
 					<img 
+						data-aos="fade-up" 
+						data-aos-delay="150" 
 						class="img-fluid moto_ganadora" 
 						:src="'./img/' + motoCorrecta.image_lg" 
 						:alt="'moto honda' + motoCorrecta.name + ' grande'">
-					<h5>{{ motoCorrecta.name }}</h5>
+					<h5
+						data-aos="fade-up" 
+						data-aos-delay="200">{{ motoCorrecta.name }}
+					</h5>
 				</div>
 
 				<div class="col-md-5">
-					<p v-html="motoCorrecta.description"></p>
+					<p data-aos="fade-up" data-aos-delay="250" v-html="motoCorrecta.description"></p>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-12">
-					<button @click="goToPantallaJuego" class="transition btn btn-primary elegir w-100">JUGAR DE NUEVO</button>
+						<button 
+							@click="goToPantallaJuego" 
+							class="transition btn btn-primary elegir w-100">JUGAR DE NUEVO
+						</button>
 				</div>
 			</div>
 
