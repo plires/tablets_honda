@@ -161,14 +161,14 @@
 			</div>
 
 			<div class="row">
-				<div data-aos="fade-up" data-aos-delay="200" class="col-md-10 offset-md-1">
+				<div class="col-md-10 offset-md-1">
 					<button 
 						@click="jugar" 
 						:disabled="verifyMotoSelected" 
 						class="transition btn btn-primary elegir w-100">ELEGIR
 					</button>
 				</div>
-				<div data-aos="fade-up" data-aos-delay="250" class="col-md-2 offset-md-5">
+				<div class="col-md-2 offset-md-5">
 					<button 
 						@click="goToPantallaInicio" 
 						class="transition btn btn-primary reiniciar w-100">REINICIAR
@@ -213,7 +213,7 @@
 				</div>
 
 				<div class="col-md-5">
-					<p v-html="motoCorrecta.description"></p>
+					<p data-aos="fade-up" data-aos-delay="250" v-html="motoCorrecta.description"></p>
 				</div>
 			</div>
 
