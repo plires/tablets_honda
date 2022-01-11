@@ -50,6 +50,8 @@ let app = new Vue({
       }
     ]
 
+    this.showMoto(1) // Selecciono la primero moto disponible para que no de error el modal inicialmente
+
   },
 
   methods: {
@@ -173,22 +175,15 @@ let app = new Vue({
         case '4.mp3':
           moto_correcta_id = 4;
           break;
-        case '5.mp3':
-          moto_correcta_id = 5;
-          break;
-        case '6.mp3':
-          moto_correcta_id = 6;
-          break;
       }
 
       let motoCorrecta = this.motos.filter((moto) => moto.id == moto_correcta_id)
-
       this.motoCorrecta = motoCorrecta[0]
 
     },
 
 
-    motoSeleccionadaPorUsuario: function(moto_id) {
+    motoSeleccionadaPorUsuario: function(id) {
 
       // Remover todas las clases "image_featured" de las imagenes
       let imagesMotos = document.getElementsByClassName('images_motos')
@@ -201,7 +196,7 @@ let app = new Vue({
       // Agregar la clase "image_featured" a la imagen a la cual se hizo click
       event.target.classList.add('image_featured')
 
-      let motoFound = this.motos.filter((moto) => moto.id == moto_id)
+      let motoFound = this.motos.filter((moto) => moto.id == id)
 
       this.motoSeleccionada = motoFound[0]
 

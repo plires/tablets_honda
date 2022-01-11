@@ -101,8 +101,8 @@
 
 						<!-- Grilla Motos -->
 						<div 
-							v-for="moto in motos" 
-							key="moto.id" 
+							v-for="(moto, index) in motos"
+							:key="index" 
 							:class="[ moto.id % 2 == 0 ? 'col-md-5' : 'col-md-5 offset-md-1']"
 							>
 							<div class="motos">
